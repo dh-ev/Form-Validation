@@ -1,13 +1,13 @@
 function validate()
 {
-    let alertMsg = validatefname()[0] + validatedob()[0] + validateemail()[0] + validatephno()[0] + validateusername[0] + validatepwd()[0];
+    let alertMsg = validatefname()[0] + validatedob()[0] + validategender()[0] + validateemail()[0] + validatephno()[0] + validateusername()[0] + validatepwd()[0];
     if (alertMsg != ""){
         alert(alertMsg);
     }
     else{
         alert("Valid Form. Thank You!");
     }
-    return (validatefname()[1] && validatedob()[1] && validateemail()[1] && validatephno()[1] && validateusername[1] && validatepwd()[1]);
+    return (validatefname()[1] && validatedob()[1] && validategender()[1] && validateemail()[1] && validatephno()[1] && validateusername[1] && validatepwd()[1]);
 }
 
 function validatefname(){
@@ -108,7 +108,7 @@ function validatepwd(){
         return ["Please fill valid password.\n",false];
     }
     else if(pwd!=cpwd){
-        return ["Please refill your password\n", false];
+        return ["Please refill your password.\n", false];
     }
     else
     {
