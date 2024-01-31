@@ -1,13 +1,13 @@
 function validate()
 {
-    let alertMsg = validatefname()[0] + validatedob()[0] + validateemail()[0] + validatephno()[0] + validatepwd()[0];
+    let alertMsg = validatefname()[0] + validatedob()[0] + validateemail()[0] + validatephno()[0] + validateusername[0] + validatepwd()[0];
     if (alertMsg != ""){
         alert(alertMsg);
     }
     else{
         alert("Valid Form. Thank You!");
     }
-    return (validatefname()[1] && validatedob()[1] && validateemail()[1] && validatephno()[1] && validatepwd()[1]);
+    return (validatefname()[1] && validatedob()[1] && validateemail()[1] && validatephno()[1] && validateusername[1] && validatepwd()[1]);
 }
 
 function validatefname(){
@@ -75,6 +75,21 @@ function validatephno(){
     }
     else if ((/^[6-9]\d{9}$/.test(phno))==false){
         return ["Please fill valid phone number.\n",false];
+    }
+    else
+    {
+        return ["",true];
+    }
+}
+
+function validateusername(){
+    let username = document.getElementById("username").value;
+    if (username == "")
+    {
+        return ["Please fill your username.\n",false];
+    }
+    else if ((/^[a-zA-Z0-9]{1,14}$/.test(username))==false){
+        return ["Please fill valid username.\n",false];
     }
     else
     {
