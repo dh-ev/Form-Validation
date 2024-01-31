@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <form name="myForm" onsubmit="return validate()">
+        <h1>Form</h1>
+        <div class="info req">
+            <label for="fname">Full Name</label><br>
+            <input type="text" id="fname" class="ques" name="fname"/>
+            <p id="fname-validation"></p>
+        </div>
+        <div class="info req">
+            <label for="dob">Date Of Birth</label><br>
+            <input type="text" id="dob" class="ques" name="dob"/>
+            <p id="dob-validation"></p>
+        </div>
+        <div class="info req">
+            <label for="gender">Gender</label><br>
+            <div class="gender-radio">
+                <input type="radio" name="gender" class="gbutton">
+                <label>Male</label>
+                <input type="radio" name="gender" class="gbutton">
+                <label>Female</label>
+                <input type="radio" name="gender" class="gbutton">
+                <label>Other</label>
+            </div>
+            <p id="gender-validation"></p>
+        </div>        
+        <div class="info req">
+            <label for="email">Email Address</label><br>
+            <input type="text" id="email" class="ques" name="email"/>
+            <p id="email-validation"></p>
+        </div>
+        <div class="info req">
+            <label for="phno">Phone Number</label><br>
+            <input type="text" id="phno" class="ques" />
+            <p id="phno-validation"></p>
+        </div>     
+        <div class="info req">
+            <label for="Username">Username</label><br>
+            <input type="text" id="username" class="ques" name="Username"/>
+            <p id="username-validation"></p>
+        </div>     
+        <div class="info req">
+            <label for="password">Password</label><br>
+            <input type="password" id="pwd" class="ques" name="password"/>
+            <p id="pwd-validation"></p>
+        </div>        
+        <div class="info req">
+            <label for="confirm">Confirm Password</label><br>
+            <input type="password" id="cpwd" class="ques" name="confirm"/>
+            <p id="cpwd-validation"></p>
+        </div>     
+        <input type="submit" id="submit" name="submit"/>
+    </form>
+</body>
+
+<script src="./javascript.jsx"></script>
+</html>
